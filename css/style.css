@@ -392,4 +392,17 @@ footer {
     }
 
     /*FOOTER*/
+    .footer-contenido h4 {
+        border-bottom: none;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-contenido{
+        padding-bottom: 16px;
+    }
+    .footer-contenido p {
+        padding-top: 1px;
+    }
 }
