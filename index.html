@@ -1,13 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Página Web Samuel Muñoz</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'open sans';
+        }
+
+        .container {
+            padding-bottom: 60px;
+            max-width: 1000px;
+            margin: auto;
+            width: 90%;
+            overflow: hidden;
+        }
+
+        .sub-titulo {
+            text-align: center;
+            padding-bottom: 46px;
+            color: #642a73;
+            font-size: 30px;
+        }
+
+        nav {
+            text-align: right;
+            padding-top: 20px;
+            padding-right: 20px;
+
+        }
+
+        nav>a {
+            text-decoration: none;
+            padding-right: 10px;
+            color: white;
+            font-weight: 300;
+        }
+
+        nav>a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            width: 100%;
+            height: 600px;
+            background-color: blueviolet;
+            position: relative;
+            background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(img/portada.jpg);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(img/portada.jpg);
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .header-titulos {
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 130px;
+            color: white;
+        }
+
+        h1 {
+            font-size: 50px;
+            padding-bottom: 20px;
+        }
+
+        .header-titulos h2 {
+            font-weight: 300;
+            font-size: 30px;
+        }
+
+        .wave {
+            position: absolute;
+            width: 100%;
+            bottom: 0px;
+        }
+
+        /*SECCION NUESTRO PRODUCTO*/
+        .container-producto {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .container-producto .main-img {
+            width: 46%;
+        }
+
+        .container-producto .producto-texto {
+            width: 46%;
+        }
+
+        .container-producto .producto-texto h3 {
+            padding-bottom: 16px;
+
+
+        }
+
+        .container-producto .producto-texto p {
+            text-align: justify;
+            padding-bottom: 16px;
+            font-weight: 200;
+        }
+
+        .container-producto .producto-texto span {
+            background-color: #4d0686;
+            color: white;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            text-align: center;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+            margin-right: 10px;
+
+        }
+
+        /*SECCION PORTAFOLIO*/
+        .section-portafolio {
+            background: #f2f2f2;
+
+        }
+
+        .titulo {
+            padding-top: 30px;
+        }
+
+        .portafolio-content {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+
+        .portafolio-album {
+            width: 24%;
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .portafolio-album>img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+
+        }
+
+        .hover-galeria {
+            width: 100%;
+            height: 100%;
+            background: hsla(273, 91%, 27%, 0.7);
+            position: absolute;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            top: 0;
+            transform: scale(0);
+            transition: transform .5s;
+
+        }
+
+        .hover-galeria>img {
+            width: 50px;
+        }
+
+        .hover-galeria>p {
+            color: #ffff;
+            width: 50px;
+            padding-top: 7px;
+        }
+
+        .portafolio-album:hover .hover-galeria {
+            transform: scale(1);
+        }
+
+        /*Que dicen los clientes*/
+        .cards {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        .cards .card {
+            background: #4d0686;
+            display: flex;
+            width: 46%;
+            height: 200px;
+            align-items: center;
+            justify-content: space-evenly;
+            border-radius: 5px;
+            box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+        }
+
+        .card>img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border: 3px solid #fff;
+            border-radius: 50%;
+            display: block;
+
+        }
+
+        .nuestros-clientes-texto {
+            padding-left: 22px;
+            width: 60%;
+            color: #fff;
+            font-weight: 200;
+        }
+
+        .section-nuestros-clientes {
+            margin-top: 70px;
+        }
+
+        /*SECCION SERVICIOS*/
+        .section-nuestros-servicios {
+            background: #f2f2f2;
+            padding-top: 30px;
+        }
+
+        .nuestros-servicios-contenido {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .servicios-contenido-adentro {
+            width: 28%;
+        }
+
+        .servicios-contenido-adentro>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .servicios-contenido-adentro>p {
+            width: 100%;
+            text-align: justify;
+        }
+
+        footer {
+            background: #414141;
+            padding: 60px 0 30px 0;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .footer-container {
+            display: flex;
+            width: 90%;
+            justify-content: space-evenly;
+            border-bottom: 1px solid #ccc;
+            margin: auto;
+            padding-bottom: 50px;
+        }
+
+        .footer-contenido {
+            color: #ffff;
+        }
+
+        .footer-nombre {
+            text-align: center;
+            font-size: 24px;
+            margin: 20px 0 0 0;
+            color: #9e9797;
+        }
+        .footer-contenido{
+            text-align: center;
+        }
+
+        .footer-contenido h4 {
+            padding-bottom: 5px;
+            border-bottom: 3px solid violet;
+        }
+
+        .footer-contenido p {
+            padding-top: 10px;
+
+        }
+    </style>
+
 </head>
+
 <body>
-    <h1>Hola Mundo</h1>
-    <p>Vamos hola mundo</p>
-    <p>Otro cambio</p>
+    <header>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Potafolio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <div class="header-titulos">
+            <h1>Potencia tus ventas al menos un 200%</h1>
+            <h2>Con una página web potente</h2>
+        </div>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+    <main>
+        <section class="container main-producto">
+            <h2 class="sub-titulo"> Nuestro producto</h2>
+            <div class="container-producto">
+                <img src="img/ilustracion2.svg" alt="" class="main-img">
+                <div class="producto-texto">
+                    <h3><span>1</span>Los mejores productos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur ad
+                        consequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi pariatur,
+                        velit doloribus laboriosam ut.</p>
+
+                    <h3><span>2</span>Los mejores productos</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt veniam eius aspernatur
+                        adconsequuntur aperiam minima sed dicta odit numquam sapiente quam eum, architecto animi
+                        pariatur,velit doloribus laboriosam ut.
+                    </p>
+
+                </div>
+            </div>
+        </section>
+
+        <section class="section-portafolio">
+            <h2 class="sub-titulo titulo">Portafolio</h2>
+            <div class="container portafolio-content">
+                <div class="portafolio-album">
+                    <img src="img/img1.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro Trabajo</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-album">
+                    <img src="img/img2.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro Trabajo</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-album">
+                    <img src="img/img3.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro Trabajo</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-album">
+                    <img src="img/img4.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro Trabajo</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-album">
+                    <img src="img/img5.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro Trabajo</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-album">
+                    <img src="img/img6.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro Trabajo</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-album">
+                    <img src="img/img7.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro Trabajo</p>
+                    </div>
+                </div>
+
+                <div class="portafolio-album">
+                    <img src="img/img8.jpg" alt="">
+                    <div class="hover-galeria">
+                        <img src="img/icono1.png" alt="">
+                        <p>Nuestro Trabajo</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--QUE DICEN NUESTROS CLIENTES-->
+        <section class="container section-nuestros-clientes">
+            <h2 class="sub-titulo">Que dicen nuestros clientes</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="img/face1.jpg" alt="">
+                    <div class="nuestros-clientes-texto">
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="img/face2.jpg" alt="">
+                    <div class="nuestros-clientes-texto">
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, sapiente!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class=" section-nuestros-servicios">
+            <div class="container">
+                <h2 class="sub-titulo">Nuestros servicios</h2>
+                <div class="nuestros-servicios-contenido">
+                    <div class="servicios-contenido-adentro">
+                        <img src="img/ilustracion1.svg" alt="">
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    </div>
+
+                    <div class="servicios-contenido-adentro">
+                        <img src="img/ilustracion3.svg" alt="">
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    </div>
+
+                    <div class="servicios-contenido-adentro">
+                        <img src="img/ilustracion4.svg" alt="">
+                        <h3>Name</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore, qui?</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-contenido">
+                <h4>Phone</h4>
+                <p>8296312</p>
+            </div>
+            <div class="footer-contenido">
+                <h4>Email</h4>
+                <p>8296312</p>
+            </div>
+            <div class="footer-contenido">
+                <h4>Location</h4>
+                <p>8296312</p>
+            </div>
+        </div>
+        <div class="footer-nombre">
+            <p>© Sam - Front-end | Samuel Muñoz García</p>
+        </div>
+    </footer>
 </body>
+
 </html>
