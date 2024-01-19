@@ -296,6 +296,7 @@
             header {
                 background-position: center;
             }
+
             /*NUESTRO PRODUCTO*/
 
             .container-producto {
@@ -315,38 +316,92 @@
                 padding-top: 80px;
                 width: 87%;
             }
+
             /*PORTAFOLIO*/
 
-            .portafolio-content{
+            .portafolio-content {
                 display: flex;
                 justify-content: space-around;
             }
 
-            .portafolio-album{
+            .portafolio-album {
                 width: 49%;
             }
 
-
-
-
-
-
-
-
-
-
-            /* QUE DICEN NUESTROS CLIENTES*/
-            .cards{
+            /*QUE DICEN NUESTROS CLIENTES*/
+            .cards {
                 padding-bottom: 70px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 flex-direction: column;
             }
-            .cards .card{
-                width: 64%;
+
+            .cards .card {
+                width: 100%;
                 margin-bottom: 34px;
             }
+
+            /*NUESTROS SERVICIOS*/
+            .nuestros-servicios-contenido {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .nuestros-servicios-contenido .servicios-contenido-adentro {
+                width: 100%;
+            }
+
+            /*RESPONSIVE 500*/
+            @media screen and (max-width:500px) {
+
+                /*HEADER*/
+                nav {
+                    text-align: center;
+                    font-size: 15px;
+                    padding-right: 10px;
+                }
+
+                h1 {
+                    font-size: 40px;
+                }
+
+                .header-titulos h2 {
+                    font-size: 25px;
+                }
+
+                /*NUESTRO PRODUCTO*/
+
+                .container-producto .main-img {
+                    width: 70%;
+                }
+
+                .container-producto .producto-texto {
+                    width: 70%;
+                    padding-top: 70px;
+                }
+
+                /*PORTAFOLIO*/
+
+                .portafolio-content {
+                    display: flex;
+                    flex-wrap: wrap;
+                }
+
+                .portafolio-album {
+                    width: 100%;
+                }
+
+
+            }
+
+            /* QUE DICEN NUESTROS CLIENTES*/
+            .section-nuestros-clientes {
+                margin-top: 70px;
+                padding-bottom: 0;
+            }
+
+            /*FOOTER*/
         }
     </style>
 
