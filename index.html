@@ -277,7 +277,8 @@
             margin: 20px 0 0 0;
             color: #9e9797;
         }
-        .footer-contenido{
+
+        .footer-contenido {
             text-align: center;
         }
 
@@ -289,6 +290,63 @@
         .footer-contenido p {
             padding-top: 10px;
 
+        }
+
+        @media screen and (max-width:900px) {
+            header {
+                background-position: center;
+            }
+            /*NUESTRO PRODUCTO*/
+
+            .container-producto {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+            }
+
+            .container-producto .main-img {
+                width: 500px;
+
+            }
+
+            .container-producto .producto-texto {
+                padding-top: 80px;
+                width: 87%;
+            }
+            /*PORTAFOLIO*/
+
+            .portafolio-content{
+                display: flex;
+                justify-content: space-around;
+            }
+
+            .portafolio-album{
+                width: 49%;
+            }
+
+
+
+
+
+
+
+
+
+
+            /* QUE DICEN NUESTROS CLIENTES*/
+            .cards{
+                padding-bottom: 70px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .cards .card{
+                width: 64%;
+                margin-bottom: 34px;
+            }
         }
     </style>
 
