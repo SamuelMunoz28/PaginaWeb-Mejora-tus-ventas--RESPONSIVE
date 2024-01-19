@@ -1,0 +1,395 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'open sans';
+}
+
+.container {
+    padding-bottom: 60px;
+    max-width: 1000px;
+    margin: auto;
+    width: 90%;
+    overflow: hidden;
+}
+
+.sub-titulo {
+    text-align: center;
+    padding-bottom: 46px;
+    color: #642a73;
+    font-size: 30px;
+}
+
+nav {
+    text-align: right;
+    padding-top: 20px;
+    padding-right: 20px;
+
+}
+
+nav>a {
+    text-decoration: none;
+    padding-right: 10px;
+    color: white;
+    font-weight: 300;
+}
+
+nav>a:hover {
+    text-decoration: underline;
+}
+
+header {
+    width: 100%;
+    height: 600px;
+    background-color: blueviolet;
+    position: relative;
+    background: -webkit-linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/portada.jpg);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, hsla(340, 95%, 50%, 0.459), hsla(317, 45%, 52%, 0.664)), url(../img/portada.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.header-titulos {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 130px;
+    color: white;
+}
+
+h1 {
+    font-size: 50px;
+    padding-bottom: 20px;
+}
+
+.header-titulos h2 {
+    font-weight: 300;
+    font-size: 30px;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    bottom: 0px;
+}
+
+/*SECCION NUESTRO PRODUCTO*/
+.container-producto {
+    display: flex;
+    justify-content: space-around;
+}
+
+.container-producto .main-img {
+    width: 46%;
+}
+
+.container-producto .producto-texto {
+    width: 46%;
+}
+
+.container-producto .producto-texto h3 {
+    padding-bottom: 16px;
+
+
+}
+
+.container-producto .producto-texto p {
+    text-align: justify;
+    padding-bottom: 16px;
+    font-weight: 200;
+}
+
+.container-producto .producto-texto span {
+    background-color: #4d0686;
+    color: white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    text-align: center;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 10px;
+
+}
+
+/*SECCION PORTAFOLIO*/
+.section-portafolio {
+    background: #f2f2f2;
+
+}
+
+.titulo {
+    padding-top: 30px;
+}
+
+.portafolio-content {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.portafolio-album {
+    width: 24%;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.portafolio-album>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+
+}
+
+.hover-galeria {
+    width: 100%;
+    height: 100%;
+    background: hsla(273, 91%, 27%, 0.7);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    top: 0;
+    transform: scale(0);
+    transition: transform .5s;
+
+}
+
+.hover-galeria>img {
+    width: 50px;
+}
+
+.hover-galeria>p {
+    color: #ffff;
+    width: 50px;
+    padding-top: 7px;
+}
+
+.portafolio-album:hover .hover-galeria {
+    transform: scale(1);
+}
+
+/*Que dicen los clientes*/
+.cards {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cards .card {
+    background: #4d0686;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+
+.card>img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+
+}
+
+.nuestros-clientes-texto {
+    padding-left: 22px;
+    width: 60%;
+    color: #fff;
+    font-weight: 200;
+}
+
+.section-nuestros-clientes {
+    margin-top: 70px;
+}
+
+/*SECCION SERVICIOS*/
+.section-nuestros-servicios {
+    background: #f2f2f2;
+    padding-top: 30px;
+}
+
+.nuestros-servicios-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.servicios-contenido-adentro {
+    width: 28%;
+}
+
+.servicios-contenido-adentro>img {
+    width: 100%;
+    height: 100%;
+}
+
+.servicios-contenido-adentro>p {
+    width: 100%;
+    text-align: justify;
+}
+
+footer {
+    background: #414141;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+
+.footer-container {
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    border-bottom: 1px solid #ccc;
+    margin: auto;
+    padding-bottom: 50px;
+}
+
+.footer-contenido {
+    color: #ffff;
+}
+
+.footer-nombre {
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #9e9797;
+}
+
+.footer-contenido {
+    text-align: center;
+}
+
+.footer-contenido h4 {
+    padding-bottom: 5px;
+    border-bottom: 3px solid violet;
+}
+
+.footer-contenido p {
+    padding-top: 10px;
+
+}
+
+@media screen and (max-width:900px) {
+    header {
+        background-position: center;
+    }
+
+    /*NUESTRO PRODUCTO*/
+
+    .container-producto {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .container-producto .main-img {
+        width: 500px;
+
+    }
+
+    .container-producto .producto-texto {
+        padding-top: 80px;
+        width: 87%;
+    }
+
+    /*PORTAFOLIO*/
+
+    .portafolio-content {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .portafolio-album {
+        width: 49%;
+    }
+
+    /*QUE DICEN NUESTROS CLIENTES*/
+    .cards {
+        padding-bottom: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .cards .card {
+        width: 100%;
+        margin-bottom: 34px;
+    }
+
+    /*NUESTROS SERVICIOS*/
+    .nuestros-servicios-contenido {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .nuestros-servicios-contenido .servicios-contenido-adentro {
+        width: 100%;
+    }
+
+    /*RESPONSIVE 500*/
+    @media screen and (max-width:500px) {
+
+        /*HEADER*/
+        nav {
+            text-align: center;
+            font-size: 15px;
+            padding-right: 10px;
+        }
+
+        h1 {
+            font-size: 40px;
+        }
+
+        .header-titulos h2 {
+            font-size: 25px;
+        }
+
+        /*NUESTRO PRODUCTO*/
+
+        .container-producto .main-img {
+            width: 70%;
+        }
+
+        .container-producto .producto-texto {
+            width: 70%;
+            padding-top: 70px;
+        }
+
+        /*PORTAFOLIO*/
+
+        .portafolio-content {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .portafolio-album {
+            width: 100%;
+        }
+
+
+    }
+
+    /* QUE DICEN NUESTROS CLIENTES*/
+    .section-nuestros-clientes {
+        margin-top: 70px;
+        padding-bottom: 0;
+    }
+
+    /*FOOTER*/
+}
